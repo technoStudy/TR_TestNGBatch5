@@ -41,6 +41,21 @@ public class _07_Assertions {
         Assert.assertTrue(s1 == s2, "oluşan la beklenen aynı değil"); //aem
     }
 
+    @Test
+    public void NullOrnek(){
+        String s=null;
+
+        // Actual(oluşan), Expected (Beklenen), Mesajı (opsiyonel)
+        Assert.assertNull(s, "Değer null değil"); //aem
+    }
+
+    @Test
+    public void direktFail(){
+       int a=56;
+
+       if (a!=55)
+           Assert.fail();
+    }
 
 
 }
