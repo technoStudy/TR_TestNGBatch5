@@ -17,7 +17,7 @@ public class _01_Giris {
 //          driverIslemleriniYap();
 //          websitesiniAc();
 //          LoginTestiniYap()
-//          Assert test
+//          Assert test test
 //      }
 
      @Test
