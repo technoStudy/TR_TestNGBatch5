@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
   Senaryo
   1- Siteyi açınız.
   2- Newsletter  Subscribe işlemini abone lunuz(YES)  , işlemin başarılı olduğunu kontrol ediniz.
-
+  3- Ayrı bir test ile Newsletter  Subscribe işlemini abonelikten çıkınız(NO)
  */
 
 public class _08_SubscribeNewsLetter extends BaseDriver {
@@ -28,6 +28,11 @@ public class _08_SubscribeNewsLetter extends BaseDriver {
 
         WebElement msgLabel= driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']"));
         Assert.assertTrue(msgLabel.getText().toLowerCase().contains("success"));
+    }
+
+    @Test
+    public void subscribeFunctionNo() {
+
     }
 
 }
