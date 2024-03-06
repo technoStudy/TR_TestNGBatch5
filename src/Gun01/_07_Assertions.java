@@ -57,5 +57,14 @@ public class _07_Assertions {
            Assert.fail();
     }
 
+    @Test
+    public void FalseOrnek(){
+        int s1=5;
+        int s2=7;
+
+        // Actual(oluşan), Expected (Beklenen), Mesajı (opsiyonel)
+        Assert.assertFalse(s1==s2, "oluşan la beklenen aynı değil"); //aem
+    }
+
 
 }
