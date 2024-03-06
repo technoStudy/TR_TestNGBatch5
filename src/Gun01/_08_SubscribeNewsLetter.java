@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class _08_SubscribeNewsLetter extends BaseDriver {
 
-    @Test
+    @Test(priority = 1)
     public void subscribeFunctionYes(){
         WebElement newsLetterLink=driver.findElement(By.linkText("Newsletter"));
         newsLetterLink.click();
@@ -30,9 +30,19 @@ public class _08_SubscribeNewsLetter extends BaseDriver {
         Assert.assertTrue(msgLabel.getText().toLowerCase().contains("success"));
     }
 
-    @Test
+    @Test(priority = 2)
     public void subscribeFunctionNo() {
+        WebElement newsLetterLink=driver.findElement(By.linkText("Newsletter"));
+        newsLetterLink.click();
 
+        WebElement subscribeNo=driver.findElement(By.xpath("//input[@value='0']"));
+        subscribeNo.click();
+
+        WebElement continueButton=driver.findElement(By.xpath("//input[@value='Continue']"));
+        continueButton.click();
+
+        WebElement msgLabel= driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']"));
+        Assert.assertTrue(msgLabel.getText().toLowerCase().contains("success"));
     }
 
 }
