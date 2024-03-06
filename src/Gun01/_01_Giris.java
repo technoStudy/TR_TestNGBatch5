@@ -21,13 +21,13 @@ public class _01_Giris {
 //      }
 
      @Test
-     public void driverIslemleriniYap(){
-         System.out.println("driverIslemleriniYap çalıştı");
+     public void DriverIslemleriniYap(){
+         System.out.println("DriverIslemleriniYap çalıştı");
      }
 
     @Test
-    public void websitesiniAc(){
-        System.out.println("websitesiniAc çalıştı");
+    public void WebsitesiniAc(){
+        System.out.println("WebsitesiniAc çalıştı");
     }
 
     @Test
