@@ -16,18 +16,21 @@ public class _05_Enable {
     public void Test1()
     {
         System.out.println("Test 1");
+        driver.get("https://techno.study/");
     }
 
     @Test
     public void Test2()
     {
         System.out.println("Test 2");
+        driver.get("https://www.facebook.com/");
     }
 
     @Test
     public void Test3()
     {
         System.out.println("Test 3");
+        driver.get("https://www.google.com/");
     }
 
     public static WebDriver driver;
