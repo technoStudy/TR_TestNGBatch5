@@ -28,6 +28,7 @@ public class BaseDriver {
     public void KapanisIslemleri(){  // TearDown
         //System.out.println("kapanış işlemleri yapılıyor"); //BekleKapat
 
+        //logout
         Tools.Bekle(3);
         driver.quit();
     }

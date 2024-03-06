@@ -1,6 +1,7 @@
 package Gun01;
 
 import Utlity.BaseDriver;
+import Utlity.Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,6 +14,7 @@ public class _06_Ornek extends BaseDriver {
     public void LoginTest(){
         System.out.println("Login Test başladı");
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
+        Tools.Bekle(2);
 
         WebElement email=driver.findElement(By.id("input-email"));
         email.sendKeys("testng1@gmail.com");
