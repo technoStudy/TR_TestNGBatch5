@@ -23,7 +23,7 @@ public class _08_SubscribeNewsLetter extends BaseDriver {
     By subNo= By.xpath("//input[@value='0']");
 
     @Test(priority = 1)
-    public void subscribeFunctionYes(){
+    public void SubscribeFunctionYes(){
         WebElement newsLetterLink=driver.findElement(link);
         newsLetterLink.click();
 
@@ -39,12 +39,31 @@ public class _08_SubscribeNewsLetter extends BaseDriver {
     }
 
     @Test(priority = 2)
-    public void subscribeFunctionNo() {
+    public void SubscribeFunctionNo() {
         WebElement newsLetterLink=driver.findElement(link);
         newsLetterLink.click();
 
         WebElement subscribeNo=driver.findElement(subNo);
         subscribeNo.click();
+
+        WebElement continueButton=driver.findElement(cntBtn);
+        continueButton.click();
+
+        Tools.SuccessMessageValidation();
+    }
+
+    @Test(priority = 3)
+    public void SubscribeFunctionForBoth(){
+        WebElement newsLetterLink=driver.findElement(link);
+        newsLetterLink.click();
+
+        WebElement subscribeYes=driver.findElement(subYes);
+        WebElement subscribeNo=driver.findElement(subNo);
+
+        if (subscribeYes.isSelected())
+            subscribeNo.click();
+        else
+            subscribeYes.click();
 
         WebElement continueButton=driver.findElement(cntBtn);
         continueButton.click();
