@@ -17,8 +17,8 @@ import javax.xml.stream.events.EntityDeclaration;
 import java.time.Duration;
 
 public class BaseDriverParameter {
-    public static WebDriver driver;
-    public static WebDriverWait wait;
+    public WebDriver driver;
+    public WebDriverWait wait;
 
 
     @BeforeClass
@@ -27,9 +27,9 @@ public class BaseDriverParameter {
        // System.out.println("başlangıç işlemleri yapılıyor"); //driver oluşturma, wait işlemleri,
 
         switch (browserTipi.toLowerCase()){
-            case "chrome": driver=new ChromeDriver(); break;
             case "firefox": driver=new FirefoxDriver(); break;
             case "edge": driver=new EdgeDriver(); break;
+            default: driver=new ChromeDriver();
         }
 
         //driver.manage().window().maximize(); // Ekranı max yapıyor.

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="my suit">
+<suite name="my suit" parallel="tests" thread-count="2">
 
     <test name="test1">
         <parameter name="browserTipi" value="chrome"></parameter>
