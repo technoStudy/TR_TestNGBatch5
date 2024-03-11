@@ -13,7 +13,7 @@
 
         <!--çalışacak classların yazıldığı bölüm-->
         <classes>
-            <class name="Gun03.Groups"></class>
+            <class name="Gun03._01_Groups"></class>
         </classes>
 
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="my suit">
+    <test name="test1">
+        <parameter name="mesaj" value="Merhaba testing dünyası"></parameter>
+
+        <classes>
+            <class name="Gun03._03_ContactUsParameter"></class>
+        </classes>
+    </test>
+</suite>

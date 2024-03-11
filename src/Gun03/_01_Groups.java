@@ -2,7 +2,7 @@ package Gun03;
 
 import org.testng.annotations.Test;
 
-public class Groups {
+public class _01_Groups {
 
     @Test(groups = {"Smoke Test"}) // grup etiketi verdi
     public void Test1(){ System.out.println("test1"); }
