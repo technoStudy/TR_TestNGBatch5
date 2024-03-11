@@ -3,10 +3,10 @@
 <suite name="my suit">
     <test name="test1">
 
-        <!-- hangi gruplar çalıştırılacak-->
+        <!-- hangi gruplar çalışMAYACAK-->
         <groups>
             <run>
-              <include name="Smoke Test"></include>
+              <exclude name="Smoke Test"></exclude>
             </run>
         </groups>
 
@@ -15,6 +15,7 @@
             <class name="Gun03.Groups"></class>
         </classes>
 
-
     </test>
 </suite>
+
+        <!-- Smoke Test harici çalıştır-->

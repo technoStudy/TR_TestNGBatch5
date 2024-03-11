@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="my suit">
+    <test name="test1">
+
+        <!-- hangi gruplar çalışMAYACAK-->
+        <groups>
+            <run>
+              <exclude name="Smoke Test"></exclude>
+            </run>
+        </groups>
+
+        <!--çalışacak classların yazıldığı bölüm-->
+        <classes>
+            <class name="Gun03.Groups">
+                <methods>
+                    <exclude name="Test7"></exclude>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+</suite>
+
+        <!-- Smoke Test harici çalıştır, Test 7 de hariç-->
