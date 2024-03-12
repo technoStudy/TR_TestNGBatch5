@@ -1,7 +1,7 @@
 package Gun04;
 
 /*
-   bu örneği istediğin aşamada sorabilirsin, ister burda ister paralel testten sonra
+
    Senaryo
    1- Siteye gidiniz
    2- Specials tiklayiniz
@@ -26,6 +26,7 @@ public class _01_Soru extends BaseDriverParameter {
     public void Test1() {
         WebElement specials = driver.findElement(By.linkText("Specials"));
         specials.click();
+
 
         List<WebElement> newPrices = driver.findElements(By.cssSelector("span[class='price-new']"));
         List<WebElement> oldPrices = driver.findElements(By.cssSelector("span[class='price-old']"));
