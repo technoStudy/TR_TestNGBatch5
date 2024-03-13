@@ -34,6 +34,9 @@ public class _01_Soru extends BaseDriver {
             for(WebElement marka : harfinMarkalari) {
                 System.out.println(harfler.get(i).getText().charAt(0)+" "+ marka.getText());
                 Assert.assertEquals(harfler.get(i).getText().charAt(0), marka.getText().charAt(0));
+
+               // Assert.assertTrue(marka.getText().startsWith(harfler.get(i).getText()));
+                //"A" string -> charAt 'A'  ile 'A' char
             }
         }
     }
