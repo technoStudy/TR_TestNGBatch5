@@ -57,6 +57,6 @@ public class _03_PlaceOrder extends BaseDriver {
         wait.until(ExpectedConditions.urlContains("success"));
 
         WebElement ekranYazi=driver.findElement(By.xpath("//div[@id='content']/h1"));
-        Assert.assertEquals(ekranYazi.getText(),"Your order has been placed!");
+        Assert.assertEquals(ekranYazi.getText(), "Your order has been placed!", "Oluşan Mesajlar Eşleşmiyor");
     }
 }

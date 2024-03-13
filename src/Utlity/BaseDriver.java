@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -47,6 +48,11 @@ public class BaseDriver {
         wait.until(ExpectedConditions.titleIs("My Account"));
         Assert.assertTrue(driver.getTitle().equals("My Account"));
         System.out.println("Login Test bitti");
+
+        //legonun kapanması için- butonlar altına kalınca tıklatma yapılamıyor
+        Actions actions=new Actions(driver);
+        actions.moveToElement(driver.findElement(By.className("bitnami-corner-image"))).perform();
+        driver.findElement(By.id("bitnami-close-banner-button")).click();
     }
 
     @AfterClass
