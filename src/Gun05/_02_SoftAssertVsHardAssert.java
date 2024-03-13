@@ -26,10 +26,10 @@ public class _02_SoftAssertVsHardAssert {
         _softAssert.assertEquals("www.facebook.com/homepage", strHomePage); // hata yok
         System.out.println("Assert 1");
 
-        _softAssert.assertEquals("www.facebook.com/profile", strCartPage,"oluşanla beklenen aynı değil 1"); // hata
+        _softAssert.assertEquals("www.facebook.com/profile", strCartPage,"oluşanla beklenen aynı değil"); // hata
         System.out.println("Assert 2");
 
-        _softAssert.assertEquals("www.facebook.com/settings", strEditAccount,"oluşanla beklenen aynı değil 2"); //hata
+        _softAssert.assertEquals("www.facebook.com/settings", strEditAccount,"oluşanla beklenen aynı değil"); //hata
         System.out.println("Assert 3");
 
         //ben hataları işleme koy deyince , bu noktada hataları aktif etsin, arada kesilmesin
