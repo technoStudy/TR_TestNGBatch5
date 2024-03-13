@@ -30,6 +30,7 @@ public class _01_Soru extends BaseDriver {
 
             // Şu andaki harfin altındaki markaları aldım
             List<WebElement> harfinMarkalari=markalar.get(i).findElements(By.tagName("div"));
+            //elementin içinde element ararken XPATH kullanılamaz, çünkü o TÜM sayfada arar
 
             for(WebElement marka : harfinMarkalari) {
                 System.out.println(harfler.get(i).getText().charAt(0)+" "+ marka.getText());
