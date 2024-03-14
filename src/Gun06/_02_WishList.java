@@ -47,8 +47,10 @@ public class _02_WishList extends BaseDriver {
         WebElement wishListLink= driver.findElement(By.linkText("wish list"));
         wishListLink.click();  //  Wish List e gidildi
 
+        //Wish Listesindeki isimler alındı
         List<WebElement> wishNameList=driver.findElements(By.cssSelector("[class='text-left'] a"));
 
+        //aradığımız ürün listede var mı yok mu?
         boolean bulundu=false;
         for (WebElement e: wishNameList)
         {
