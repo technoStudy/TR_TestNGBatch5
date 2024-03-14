@@ -13,6 +13,7 @@ package Gun06;
 */
 
 import Utlity.BaseDriver;
+import Utlity.Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -30,7 +31,7 @@ public class _01_PlaceOrder_POM extends BaseDriver {
         elements.searchBox.sendKeys("ipod"+ Keys.ENTER);
         elements.addToChart.click();
         elements.shoppingChart.click();
-        elements.checkOut.click();
+        elements.checkOut.click(); // Tools.JSClick(elements.checkOut);
 
         wait.until(ExpectedConditions.elementToBeClickable(elements.continue1)).click();
         wait.until(ExpectedConditions.elementToBeClickable(elements.continue2)).click();

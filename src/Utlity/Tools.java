@@ -26,4 +26,8 @@ public class Tools {
         js.executeScript("arguments[0].click();", e); // js click : sayfanın içinden click
     }
 
+    public static int randomGenerator(int sinir){
+        return (int)(Math.random()*sinir);
+    }
+
 }
