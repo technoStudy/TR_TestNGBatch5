@@ -19,7 +19,7 @@ import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
 public class BaseDriver {
-    Logger logTutma = LogManager.getLogger(); // Logları ekleyeceğim nesneyi başlattım.
+    public static Logger logTutma = LogManager.getLogger(); // Logları ekleyeceğim nesneyi başlattım.
 
     public static WebDriver driver;
     public static WebDriverWait wait;
@@ -40,6 +40,7 @@ public class BaseDriver {
 
     public void LoginTest(){
         System.out.println("Login Test başladı");
+        logTutma.info("Log işlemi başladı");
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
         Tools.Bekle(2);
 

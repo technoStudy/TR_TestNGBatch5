@@ -18,6 +18,9 @@ public class _03_ContactUsParameter extends BaseDriver {
     @Test
     @Parameters("mesaj") // xml de ki ile aynı name olmalı
     public void contactUs(String gelenMesaj){
+
+        logTutma.info("contact us başladı");
+
         WebElement contactUsBtn=driver.findElement(By.linkText("Contact Us"));
         contactUsBtn.click();
 
@@ -28,6 +31,8 @@ public class _03_ContactUsParameter extends BaseDriver {
         submitBtn.click();
 
         Assert.assertTrue(driver.getCurrentUrl().contains("success"));
+
+        logTutma.info("contact us bitti");
     }
 
 }
