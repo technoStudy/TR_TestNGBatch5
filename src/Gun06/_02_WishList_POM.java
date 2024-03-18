@@ -29,7 +29,4 @@ public class _02_WishList_POM extends BaseDriver {
         Assert.assertTrue(bulundu,"Wish Listte eleman bulunamadı");
     }
 
-
-
-
 }

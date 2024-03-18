@@ -3,6 +3,8 @@ HTML Report Adımları
    o çalıştırılır ve ekrana alınır yani aktif olacak.
 
 2- Run Menüsünden -> Edit configuration gidilir.
+   (Class dan çalıştırınca -> class seçili olmalı ve class adı gözükmeli)
+   (XML dan çalıştırınca -> Suite seçili olmalı ve suite adı gözükmeli)
    (In-Single Mode ve Proje Adı seçili olduğu gözükür)
 
 3- Soldaki bölümde TestNG başlığının altında çalışan

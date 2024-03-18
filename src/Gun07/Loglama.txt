@@ -1,0 +1,13 @@
+Loglama : program çalışırken, gerekli adımlara
+          kendine bilgi olarak eklenen çıktılar : ekrana, dosyaya yazılır
+
+Loglama geçmişi
+Log4j (v1)-> log for Java -> Java için loglama -> apache
+JUL   -> Java için loglama , java grubu
+SLF4J -> (JUL kullanılarak) piayasa çıkıyor
+Log4j (V2) -> Log4j nin 2.versiyoun
+
+
+org.apache.logging.log4j:log4j-api:2.20.0
+org.apache.logging.log4j:log4j-core:2.20.0
+
