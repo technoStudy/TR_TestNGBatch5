@@ -21,3 +21,4 @@ HTML Report Adımları
 
 8- OK basılır.
 
+9- Test tekrar çalıştırılır.
