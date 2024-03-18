@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
+    <loggers>  <!--  Aktif etme bölümü-->
+
+        <Root level="INFO"> <!--        # logger options: ALL -> DEBUG -> INFO -> WARN -> ERROR -> FATAL -> OFF-->
+            <AppenderRef ref="LogToConsole"/>  <!--  Consola çıktıyı ver     -->
+            <AppenderRef ref="LogToFile"/>     <!--  Dosyaya yazıver     -->
+        </Root>
+
+    </loggers>
+
+
     <Appenders>   <!-- Tanımlama bölümü dosya mı, consol mu, formatı-->
 
         <Console name="LogToConsole" target="SYSTEM_OUT">
@@ -12,14 +22,5 @@
         </File>
 
     </Appenders>
-
-    <loggers>  <!--  Aktif etme bölümü-->
-
-        <Root level="INFO"> <!--        # logger options: ALL -> DEBUG -> INFO -> WARN -> ERROR -> FATAL -> OFF-->
-            <AppenderRef ref="LogToConsole"/>  <!--  Consola çıktıyı ver     -->
-            <AppenderRef ref="LogToFile"/>     <!--  Dosyaya yazıver     -->
-        </Root>
-
-    </loggers>
 
 </configuration>
