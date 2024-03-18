@@ -1,5 +1,7 @@
 package Utlity;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,11 +11,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
 public class BaseDriver {
+    Logger logTutma = LogManager.getLogger(); // Logları ekleyeceğim nesneyi başlattım.
+
     public static WebDriver driver;
     public static WebDriverWait wait;
     @BeforeClass
@@ -49,6 +55,8 @@ public class BaseDriver {
         Assert.assertTrue(driver.getTitle().equals("My Account"));
         System.out.println("Login Test bitti");
 
+        logTutma.info("Log işlemi tamamlandı"); // normal bir bilgi
+
         //legonun kapanması için- butonlar altına kalınca tıklatma yapılamıyor
         Actions actions=new Actions(driver);
         actions.moveToElement(driver.findElement(By.className("bitnami-corner-image"))).perform();
@@ -62,7 +70,20 @@ public class BaseDriver {
         //logout
         Tools.Bekle(3);
         driver.quit();
+
+        logTutma.info("Driver kapatıldı");
     }
+
+    @BeforeMethod
+    public void BeforeMetod(){
+
+    }
+
+    @AfterMethod
+    public void AfterMetod(){
+
+    }
+
 
 }
 
