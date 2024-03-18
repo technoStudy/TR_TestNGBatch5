@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -76,12 +77,16 @@ public class BaseDriver {
 
     @BeforeMethod
     public void BeforeMetod(){
+         logTutma.info("Metod başladı");
 
+         logTutma.warn("WARN : Metod başladı, hata oluşmuş olsa idi");
     }
 
     @AfterMethod
-    public void AfterMetod(){
+    public void AfterMetod(ITestResult sonuc){ // tesin sonuç ve isim bilgisini olduğu değişkeni
+        logTutma.info(sonuc.getName()+  " Metod bitti "+ (sonuc.getStatus() ==1 ? "Passed" : "failed"));
 
+        logTutma.warn("WARN : Metod bitti, hata oluşmuş olsa idi");
     }
 
 
